@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Draw a card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <div class="navbar-brand">Draw a card</div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-sm py-5">
+            <div class="row pt-5">
+                <div class="col-12 offset-0 col-sm-8 offset-md-2">
+                    <h1 class="display-1">Draw a card</h1>
+                    <p class="lead">You can deal new cards or start over to re-shuffle the deck.
+                    <div class="row">
+                        <div class="col-sm-8 mb-3">
+                            <button id="deal-one-card" class="btn btn-primary btn-sm my-1 me-2" type="button">Deal a
+                                card</button>
+                            <button id="deal-two-cards" class="btn btn-primary btn-sm my-1 me-2" type="button">Deal two
+                                cards</button>
+                            <button id="deal-three-cards" class="btn btn-primary btn-sm my-1 me-2" type="button">Deal
+                                three cards</button>
+                        </div>
+                        <div class="col-sm-4 text-end">
+                            <button id="start-over" class="btn btn-secondary btn-sm my-1 me-2" type="button"
+                                disabled>Start over</button>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap mb-3">
+
+                    </div>
+                    <div id="run-out-warning" class="alert alert-danger collapse" role="alert">
+                        Error!
+                    </div>
+                    <div id="few-cards-warning" class="alert alert-warning collapse" role="alert">
+                        Error!
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g3" id="drawn-cards">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">@ Linda H</span>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="cards.js"></script>
+</body>
+
+</html>
